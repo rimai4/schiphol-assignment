@@ -25,6 +25,8 @@ function SearchInput({ value, setValue }: Props) {
       </span>
 
       <input
+        id="search-input"
+        role="input"
         value={value}
         type="search"
         className="py-2 text-sm rounded pl-2 focus:outline-none text-schiphol-blue w-full"

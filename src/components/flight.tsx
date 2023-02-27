@@ -8,18 +8,19 @@ interface FlightProps {
 function FlightTimes({ flight }: FlightProps) {
   if (flight.expectedTime === flight.originalTime) {
     return <div className="font-bold">{flight.expectedTime}</div>;
-  } else {
-    return (
-      <div className="font-bold flex flex-col">
-        <span className="text-dark-red">{flight.expectedTime}</span>
-        <span className="text-schiphol-blue line-through">{flight.originalTime}</span>
-      </div>
-    );
   }
+
+  return (
+    <div className="font-bold flex flex-col">
+      <span className="text-dark-red">{flight.expectedTime}</span>
+      <span className="text-schiphol-blue line-through">{flight.originalTime}</span>
+    </div>
+  );
 }
 
 function FlightScore({ flight }: FlightProps) {
   const roundedScore = parseFloat(flight.score).toFixed(2);
+
   return (
     <span className="rounded-sm text-afternoon-blue font-bold text-center">{roundedScore}</span>
   );

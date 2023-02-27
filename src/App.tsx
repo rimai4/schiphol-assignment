@@ -1,10 +1,10 @@
-import Flight from './components/flight';
-import SearchInput from './components/search-input';
-import Layout from './components/layout';
-import { useFlightsData } from './hooks/use-flights-data';
 import './assets/index.css';
-import { SortDirection } from './types';
 import spinner from './assets/spinner.gif';
+import Flight from './components/flight';
+import Layout from './components/layout';
+import SearchInput from './components/search-input';
+import { useFlightsData } from './hooks/use-flights-data';
+import { SortDirection } from './types';
 
 function App() {
   const {
@@ -54,6 +54,7 @@ function App() {
                 className="p-2 bg-white text-afternoon-blue rounded"
                 onChange={(e) => updateSortDirection(e.target.value as SortDirection)}
                 value={sortDirection}
+                role="select"
               >
                 <option value="asc">↑</option>
                 <option value="desc">↓</option>

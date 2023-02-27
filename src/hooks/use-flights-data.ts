@@ -6,7 +6,7 @@ export function useFlightsData() {
   const [allFlights, setAllFlights] = useState<Flight[]>([]);
   const [flightSearch, setFlightSearch] = useState('');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
-  const [debounceTimeout, setDebounceTimeout] = useState<number | undefined>(undefined);
+  const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | undefined>(undefined);
   const [loading, setLoading] = useState(false);
 
   // Set a debounce time of 150 milliseconds so we don't fetch the data on every keystroke.
